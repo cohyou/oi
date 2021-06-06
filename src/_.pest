@@ -1,0 +1,13 @@
+// alpha = _{ 'a'..'z' }
+// ident = _{ (alpha | "_" )+ }
+ws = _{ (" " | NEWLINE )+ }
+// def = { ident }
+// data = { ws? ~ (def ~ (ws | EOI) )+ }
+// oi = { "(" ~ ws? ~ "window" ~ ANY? ~ ")" }
+digit = _{ '0'..'9' }
+num = { digit+ }
+width = _{ "width" ~ ws? ~ ":" ~ ws? ~ num }
+height = _{ "height" ~ ws? ~ ":" ~ ws? ~ num }
+wh = _{ "{" ~ ws? ~ width ~ ws? ~ height ~ ws? ~ "}" }
+canvas = _{ "(" ~ ws? ~ "canvas" ~ ws? ~ wh ~ ws? ~ ")" }
+oi = { "(" ~ ws? ~ "window" ~ ws? ~ canvas ~ ws? ~ ")" }

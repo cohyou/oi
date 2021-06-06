@@ -1,0 +1,17 @@
+[package]
+name = "oi"
+version = "0.1.0"
+authors = ["cohyou <cohyou@ironoir.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pest = "2.0"
+pest_derive = "2.0"
+glium = "0.28.0"
+winit = "0.23"
+conrod_core = "0.73.0"
+conrod_glium = "0.73.0"
+conrod_winit = "0.73.0"
+find_folder = "*"
